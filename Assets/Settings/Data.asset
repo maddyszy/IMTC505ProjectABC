@@ -17,7 +17,7 @@ MonoBehaviour:
   groupID: 50ff2de5-9ddc-4961-960a-d538d63d26a6
   boundingBoxWithHandlesPrefab: {fileID: 5671351296789090341, guid: 7b542306e34a62f4c9a822fcb19b7d99,
     type: 3}
-  stateChanged: 1
+  stateChanged: 0
   placables:
   - identifier: cube
     prefab: {fileID: 8109554980627638986, guid: 917529e032d178c4397d64e132c5fba0,
