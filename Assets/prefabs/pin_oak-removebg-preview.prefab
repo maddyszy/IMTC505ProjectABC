@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7265554279580855862}
   - component: {fileID: 8530022360250757689}
   - component: {fileID: 4866589294305575604}
+  - component: {fileID: -3238115509894520524}
   m_Layer: 0
   m_Name: pin_oak-removebg-preview
   m_TagString: PinOak
@@ -106,3 +107,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-3238115509894520524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8038496372716035639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76315dfb76d92924a8addd389a0b04dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelPrefab: {fileID: 4871241857452569642, guid: ce6ac5063817a3b4c8974278ca9e77f5,
+    type: 3}

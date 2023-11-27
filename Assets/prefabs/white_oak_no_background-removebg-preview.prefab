@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4088671864456138676}
   - component: {fileID: 7445224404441699704}
   - component: {fileID: 7831880347673782499}
-  - component: {fileID: 8894709796635367732}
+  - component: {fileID: 8886474690060402931}
   m_Layer: 0
   m_Name: white_oak_no_background-removebg-preview
   m_TagString: WhiteOak
@@ -107,7 +107,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8894709796635367732
+--- !u!114 &8886474690060402931
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,16 +116,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5753788722284758562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13037714228d88445afb8e2d449ac229, type: 3}
+  m_Script: {fileID: 11500000, guid: 76315dfb76d92924a8addd389a0b04dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioForCrabApple: {fileID: 8300000, guid: 96d785066f1d30f42936442017800a74, type: 3}
-  audioForWhiteOak: {fileID: 8300000, guid: 96d785066f1d30f42936442017800a74, type: 3}
-  audioForBlackCottonWood: {fileID: 8300000, guid: 96d785066f1d30f42936442017800a74,
+  panelPrefab: {fileID: 4871241857452569642, guid: ce6ac5063817a3b4c8974278ca9e77f5,
     type: 3}
-  audioForNorthernRedOak: {fileID: 8300000, guid: 96d785066f1d30f42936442017800a74,
-    type: 3}
-  audioForPinOak: {fileID: 8300000, guid: 96d785066f1d30f42936442017800a74, type: 3}
-  audioForRedMaple1: {fileID: 8300000, guid: 96d785066f1d30f42936442017800a74, type: 3}
-  audioForRedMaple2: {fileID: 8300000, guid: 96d785066f1d30f42936442017800a74, type: 3}
-  audioForRedOak: {fileID: 8300000, guid: 96d785066f1d30f42936442017800a74, type: 3}
