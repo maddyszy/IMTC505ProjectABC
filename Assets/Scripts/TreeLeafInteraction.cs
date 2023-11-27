@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class TreeLeafInteraction : MonoBehaviour, IPointerClickHandler
+public class TreeLeafInteraction : MonoBehaviour
 {
-    public GameObject infoCanvas;
-    private TreeInfoLoader infoLoader;
+    public GameObject panelPrefab;
+    private GameObject panelInstance;
 
-    public string treeType; // 在 Inspector 中为每个树叶设置这个值
+    private string treeType;
 
     /**
     public void OnPointerClicked()
@@ -15,9 +15,21 @@ public class TreeLeafInteraction : MonoBehaviour, IPointerClickHandler
         infoLoader.ShowTreeInfo("CrabApple");
     }
     **/
-
-    public void OnPointerClick(PointerEventData eventData)
+    void Start()
     {
-        Debug.Log("Pointer clicked");
+        panelInstance = Instantiate(panelPrefab);
+        treeType = gameObject.tag;
+        Debug.Log("Tree Type: " + treeType);
+        panelInstance.GetComponent<TreeInfoLoader>().SetTreeInfo(treeType);
+        panelInstance.SetActive(false);
+    }
+
+    public void OnMouseDown()
+    {
+        if (panelInstance != null && !panelInstance.activeSelf)
+        {
+            panelInstance.SetActive(true);
+        }
+
     }
 }
