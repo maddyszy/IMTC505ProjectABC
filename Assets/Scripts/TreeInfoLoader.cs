@@ -37,20 +37,19 @@ public class TreeInfoLoader : MonoBehaviour
         //{
         //    Debug.LogError("Tree info file not found for: " + treeTag);
         //}
-        string textFilePath = "Assets/Texts/" + treeTag + ".txt";
+        string textFilePath = "Texts/" + treeTag;
         Debug.Log("Text File Path: " + textFilePath);
-        if (File.Exists(textFilePath))
+        var textFile = Resources.Load<TextAsset>(textFilePath);
+        if (textFile != null)
         {
-            string textContent = File.ReadAllText(textFilePath);
-            infoText.text = textContent;
+            infoText.text = textFile.text;
             titleText.text = AddSpacesToSentence(treeTag);
         }
         else
         {
             Debug.LogError("Text file not found for: " + treeTag);
         }
-
-        // 构建音频文件路径并加载音频
+        
         string audioFilePath = "Audio/" + treeTag;
         Debug.Log("Audio File Path: " + audioFilePath);
         AudioClip audioClip = Resources.Load<AudioClip>(audioFilePath);
