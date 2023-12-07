@@ -5,22 +5,18 @@ public class TreeLeafInteraction : MonoBehaviour
 {
     public GameObject panelPrefab;
     private GameObject panelInstance;
+    private PlayAudioOnCollision audioSource;
 
     private string treeType;
 
-    /**
-    public void OnPointerClicked()
-    {
-        infoLoader = infoCanvas.GetComponent<TreeInfoLoader>();
-        infoLoader.ShowTreeInfo("CrabApple");
-    }
-    **/
     void Start()
     {
         panelInstance = Instantiate(panelPrefab);
         treeType = gameObject.tag;
-        Debug.Log("Tree Type: " + treeType);
+        //Debug.Log("Tree Type: " + treeType);
+        audioSource = gameObject.GetComponent<PlayAudioOnCollision>();
         panelInstance.GetComponent<TreeInfoLoader>().SetTreeInfo(treeType);
+        panelInstance.GetComponent<AudioPlayer>().SetAudioSource(audioSource);
         panelInstance.SetActive(false);
     }
 

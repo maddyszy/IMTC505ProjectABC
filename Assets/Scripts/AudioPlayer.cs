@@ -3,36 +3,34 @@ using UnityEngine.UI;
 
 public class AudioPlayer : MonoBehaviour
 {
-    private AudioClip treeAudio;
-    private AudioSource audioSource;
+    private PlayAudioOnCollision audioSource;
     public Slider progressBar;
     private bool isPlaying = false;
 
-    void Awake()
+    public void SetAudioSource(PlayAudioOnCollision audioSource)
     {
-        audioSource = GetComponent<AudioSource>();
+        this.audioSource = audioSource;
+        SetProgressBar(audioSource.getClipLength());
     }
 
     void Update()
     {
-        if (isPlaying && audioSource.isPlaying)
+        if (audioSource.isPlaying)
         {
-            progressBar.value = audioSource.time;
+            progressBar.value = audioSource.getClipTime();
         }
     }
     
-    public void SetAudioClip(AudioClip audioClip)
+    public void SetProgressBar(float clipTime)
     {
-        treeAudio = audioClip;
-        audioSource.clip = treeAudio;
         progressBar.minValue = 0;
-        progressBar.maxValue = treeAudio.length;
+        progressBar.maxValue = clipTime;
         progressBar.value = 0;
     }
 
     public void TogglePlay()
     {
-        if (isPlaying)
+        if (audioSource.isPlaying)
         {
             audioSource.Pause();
             isPlaying = false;
