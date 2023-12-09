@@ -52,3 +52,6 @@ MonoBehaviour:
   - identifier: Welcome to UBCO
     prefab: {fileID: 2436643697167234647, guid: aa12aaa4645df3147a6309e3da31ac03,
       type: 3}
+  - identifier: CameraColliderManager
+    prefab: {fileID: 3074460808095946454, guid: 09c87367a16b398439c1a11c7d814701,
+      type: 3}
